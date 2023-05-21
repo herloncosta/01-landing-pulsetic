@@ -1,0 +1,50 @@
+@use 'variables'
+@use 'mixins'
+
+section.monitor
+    background-color: #131117
+
+    .container-monitor
+        @include mixins.d-flex-center(column)
+        width: 100%
+
+        .main-content
+            display: grid
+            grid-template-columns: 450px 1fr
+
+            div
+                @include mixins.d-flex-center(column)
+
+            .left
+                color: #fff
+
+                h1
+                    font-size: 3rem
+                    margin-bottom: 2rem
+
+                p
+                    padding-right: 2rem
+                    font-size: 1.1rem
+                    color: #999
+                    line-height: 1.5rem
+
+            .right
+                padding: 1rem 0
+
+                img
+                    width: 100%
+
+        .bottom-content-wraper
+            @include mixins.d-flex-center
+            gap: 40px
+            max-width: 1180px
+
+            .info-box
+                max-height: 112px
+                @include mixins.d-flex-center
+                gap: 1.5rem
+                padding: 2rem
+                background: #1C1824
+                border-radius: 6px
+                color: #fff
+                font-weight: 500

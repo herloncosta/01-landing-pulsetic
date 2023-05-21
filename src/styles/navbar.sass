@@ -1,0 +1,92 @@
+@use 'variables'
+@use 'mixins'
+
+nav.nav-container
+    @include mixins.d-flex-center
+    background: variables.$bg-primary
+    padding: 2rem 5rem
+    color: #fff
+    position: relative
+
+    .nav-content
+        @include mixins.d-flex-center
+        width: 100%
+        justify-content: space-between
+        position: realtive
+
+        div
+            width: 100%
+
+            h1
+
+        div.right
+            display: flex
+            justify-content: flex-end
+            gap: 1rem
+
+            a
+                @include mixins.d-flex-center
+                padding: .5rem 1.5rem
+                text-decoration: none
+                background: #ffffff1A
+                border-radius: 0.625rem
+                color: #fff
+                font-weight: 600
+                transition: .2s
+
+                &:nth-child(1)
+                    background: variables.$bg-primary
+                    &:hover
+                        color: #6652e0
+
+                &:nth-child(2)
+                    &:hover
+                        background: #27AE60
+
+                &.btn-submenu
+                    border-radius: 50%
+                    padding: 1.5rem
+                    flex-direction: column
+                    gap: .3rem
+                    position: relative
+
+                    span
+                        position: absolute
+                        height: 2px
+                        width: 20px
+                        background: #fff
+
+                        &:nth-child(1)
+                            top: 35%
+
+                        &:nth-child(3)
+                            bottom: 35%
+
+        .sub-menu-content
+            @include mixins.d-flex-center(column)
+            position: absolute
+            width: 150px
+            top: 100px
+            right: 30px
+            padding: .5rem
+            background: #fff
+            border-radius: 10px
+            z-index: 1000
+            transition: .2s
+            transform: scale(0)
+            transform-origin: top
+
+            &.show
+                transform: scale(1)
+
+            a
+                width: 100%
+                text-align: left
+                color: #555
+                padding: 0.4375rem 0.625rem
+                border-radius: 4px
+                transition: .1s
+
+                &:hover
+                    background: #6652e0
+                    color: #fff

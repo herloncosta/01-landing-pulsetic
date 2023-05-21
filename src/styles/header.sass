@@ -1,0 +1,64 @@
+@use "variables"
+
+header
+    background-color: variables.$bg-primary
+    position: relative
+    overflow: hidden
+
+    .header--container
+        padding: 2.5rem 5rem
+        background-color: variables.$bg-primary
+
+        &__title
+            max-width: 30rem
+            color: #fff
+            font-size: 3.25rem
+            padding-bottom: 1.5625rem
+
+        &__subtitle
+            max-width: 30rem
+            color: #fff
+            opacity: .7
+            font-size: 1.125rem
+            margin-bottom: 2.5rem
+            letter-spacing: 0.04px
+
+        &__buttons
+            display: flex
+            gap: 15px
+
+            .button-primary
+                height: 50px
+                color: #fff
+                background-color: variables.$btn-primary
+                font-size: 18px
+                line-height: 50px
+                padding-inline: 22px
+                border-radius: 6px
+
+            .button-secondary
+                height: 50px
+                color: #fff
+                background: rgba(255,255,255,.1)
+                padding-inline: 22px
+                font-size: 18px
+                line-height: 50px
+                padding-inline: 22px
+                border-radius: 6px
+
+        &__text-info
+            max-width: 30rem
+            color: #fff
+            opacity: .7
+            font-size: 1.125rem
+            margin-top: 1.875rem
+            letter-spacing: 0.04px
+
+        img
+            max-width: 800px
+            transform: skewX(347deg) skew(1deg) rotate(1deg)
+            position: absolute
+            bottom: -50px
+            right: -50px
+            border-radius: 10px
+            box-shadow: 30px -12px 250px rgba(102,82,224,0.8), -26px 440px 250px rgba(103,58,183,0.8)
