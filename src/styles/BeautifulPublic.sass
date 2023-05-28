@@ -1,0 +1,33 @@
+@use 'mixins'
+section.container-full-beautiful
+    background: #131117
+    div.content-beautiful
+        @include mixins.d-flex-center
+        padding-block: 5rem
+        gap: 3.125rem
+
+        .left
+            @include mixins.d-flex-center(column)
+            align-items: flex-start
+            gap: 2rem
+            max-width: 450px
+
+            .title-beautiful
+                font-size: 3rem
+                font-weight: 600
+                color: #fff
+
+            .info-beautiful
+                font-size: 1.2rem
+                color: #999
+
+            .btn-beautiful
+                padding: 1rem 2.5rem
+                background: #6652e0
+                border: none
+                border-radius: 10px
+                font-size: 1.3rem
+
+        .right
+            img
+                border-radius: 10px

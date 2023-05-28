@@ -7,30 +7,29 @@ section.monitor
     .container-monitor
         @include mixins.d-flex-center(column)
         width: 100%
+        padding-block: 5rem
+        gap: 1rem
 
         .main-content
-            display: grid
-            grid-template-columns: 450px 1fr
-
-            div
-                @include mixins.d-flex-center(column)
+            @include mixins.d-flex-center
+            gap: 50px
 
             .left
+                @include mixins.d-flex-center(column)
+                gap: 2rem
+                max-width: 450px
                 color: #fff
 
                 h1
                     font-size: 3rem
-                    margin-bottom: 2rem
+                    font-weight: 600
 
                 p
-                    padding-right: 2rem
                     font-size: 1.1rem
                     color: #999
                     line-height: 1.5rem
 
             .right
-                padding: 1rem 0
-
                 img
                     width: 100%
 
